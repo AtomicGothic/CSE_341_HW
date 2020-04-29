@@ -14,7 +14,7 @@
   <button onclick="window.location.href = '../assignments.html';">Adam's Assignments</button>
   <br>
   <?php
-  echo "Welcome! Today's date is." . date("m/d/Y") . "<br>";
+  echo "Welcome! Today's date is: " . date("m/d/Y") . "<br>";
   ?>
   <br>
   <blockquote>
