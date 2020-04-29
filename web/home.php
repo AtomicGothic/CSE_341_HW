@@ -20,7 +20,7 @@
   </blockquote>
   <footer class="standardText">
         <p>Posted by: Adam Goff</p>
-        <p>Contact information: <a href="mailto:quiryquark@byui.edu" target="_blank">quirkyquark@byui.edu</a>.</p><br>
+        <p>Contact information: <a href="mailto:quiryquark@byui.edu" target="_blank">quirkyquark@byui.edu</a></p><br>
     </footer>
 </body>
 </html>
