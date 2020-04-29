@@ -12,7 +12,11 @@
   <img src="me.jpg" alt="Adam Goff" width="240" height="300">
   <p>Name: <i>Adam Goff</i><br><br />Major: <i>Software Engineering</i><br><br />Home: <i>Atlanta, GA</i></p>
   <button onclick="window.location.href = '../assignments.html';">Adam's Assignments</button>
-  <br><br />
+  <br>
+  <?php
+  echo "Welcome! Today's date is." . date("m/d/Y") . "<br>";
+  ?>
+  <br>
   <blockquote>
     "Hello! Welcome to my own little piece of the sky. A few things about me. I am a happy father of a little baby boy and I have a lovely wife. I love video games and I hope to be on a game dev team."<br>
     "I also enjoy table top games. If I have the right audience, I love to play empire building games that take the whole afternoon. Dungeons and Dragons was game of choice for me. I even was the dungeon master" <br>
@@ -21,6 +25,6 @@
   <footer class="standardText">
         <p>Posted by: Adam Goff</p>
         <p>Contact information: <a href="mailto:quiryquark@byui.edu" target="_blank">quirkyquark@byui.edu</a></p><br>
-    </footer>
+  </footer>
 </body>
 </html>
