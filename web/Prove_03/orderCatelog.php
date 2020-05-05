@@ -7,10 +7,10 @@
     <title>Adam Goff's Assignment 11</title>
     <script type="text/javascript" src="prove03_javaScript.js"></script>
 </head>
-<body onload="focusFirstElemet()">
+<body onload="focusFirstElement()">
     <div class="standardText">
         <p class="main" style="font-size: 20px;">Your Shopping Cart</p>
-        <form class="main" action="assign11.php" method="POST" onreset="focusFirstElemet()" onsubmit="return submitForm()">
+        <form class="main" action="prove03.php" method="POST" onreset="focusFirstElement()" onsubmit="return submitForm()">
             <div>First Name: <input class="inputField" id="first_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="first_name" onchange="changeToUpperCase(this.id)"><br><br /></div>
             <div>Last Name: <input class="inputField" id="last_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="last_name" onchange="changeToUpperCase(this.id)"><br><br /></div>
             <div>Address: <input class="inputField" id="address" style="background-color:#f7f7ff; width:25%; text-align:right;" type="text" name="address" onchange="changeToUpperCase(this.id)"><br><br /></div>

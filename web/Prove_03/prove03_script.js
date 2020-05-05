@@ -24,6 +24,7 @@ function validatePhoneNumber() {
     }
 }
 
+/*
 function validateCardNumber() {
     let checkInput = new RegExp("^[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}$")
     if (document.getElementById('amex_card').checked == true) {
@@ -58,13 +59,14 @@ function validateCardExpiry() {
         return true;
     }
 }
+*/
 
 function changeToUpperCase(id) {
     let tempElement = document.getElementById(id);
     tempElement.value = tempElement.value.toUpperCase();
 }
 
-function focusFirstElemet() {
+function focusFirstElement() {
     document.getElementById('first_name').focus();
 }
 

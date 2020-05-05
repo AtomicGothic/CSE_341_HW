@@ -7,9 +7,9 @@
     <head>
         <meta charset=\"utf-8\">
         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-        <link rel=\"stylesheet\" href=\"assign11_styleSheet.css\">
+        <link rel=\"stylesheet\" href=\"prove03_styleSheet.css\">
         <title>Order Cancelled</title>
-        <script type=\"text/javascript\" src=\"assign11_javaScript.js\"></script>
+        <script type=\"text/javascript\" src=\"prove03_javaScript.js\"></script>
     </head>
     <body>
         <h1 class=\"standardText\" style=\"text-align: center;\"> Your order has been cancelled.</h1>
