@@ -1,8 +1,33 @@
 #mainBody {
-    background-color:white;
+    /*Color: Independence*/
+    background-color:#3a506b;
 }
 
-#firstH1 {
-    color:orange;
-    font-family: Georgia;
+#firstH1{
+    /*Color: Ghost White*/
+    color:#f7f7ff;
+    font-family:Arial;
+}
+
+p {
+    /*Color: Ghost White*/
+    color:#f7f7ff;
+    font-family:verdana;
+}
+
+blockquote {
+    /*Color: Ghost White*/
+    color:#f7f7ff;
+    font-family:arial;
+}
+
+footer {
+    text-align: center;
+}
+
+.standardText {
+    /*Ash Grey*/
+    color: #B3B6B7;
+    font-family: "Times New Roman";
+    font-size: 14px;
 }
