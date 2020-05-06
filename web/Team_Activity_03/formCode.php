@@ -47,7 +47,6 @@ $places = $_POST["places"];
             echo "</p>";
             $countryNumber++;
         }
-​
-    ?>
+?>
 </body>
 </html>
