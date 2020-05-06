@@ -4,7 +4,11 @@
     $lastName = $_POST['last_name'];
     $merchandise = $_POST['item'];
     $total = $_POST['total'];
+    $address = $_POST['address'];
+    $phoneNumber = $_POST['phone'];
 
+    $_SESSION['userAddress'] = $address;
+    $_SESSION['userPhone'] = $phoneNumber;
     $_SESSION['firstName'] = $firstName;
     $_SESSION['lastName'] = $lastName;
     $_SESSION['order'] = $merchandise;
