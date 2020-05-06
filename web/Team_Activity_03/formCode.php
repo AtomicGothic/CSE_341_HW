@@ -38,15 +38,18 @@ $places = $_POST["places"];
             }
             echo "</span></p>";
     ?>
-    <h4>Basic info on places you've visited</h4>
+ <h4>Basic info on places you've visited</h4>
+ 
 <?php
-        $countryNumber = 1;
+/*        $countryNumber = 1;
         foreach($places as $visited) {
             echo "<p>Country {$countryNumber}: ";
             echo array_search($visited, $information);
             echo "</p>";
             $countryNumber++;
         }
+        */
 ?>
+
 </body>
 </html>
