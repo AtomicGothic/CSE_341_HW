@@ -18,7 +18,7 @@
     </head>
     <body>
         <div class="standardText">
-            <h2>Thank you for your order!</h2><br></br>
+            <h2 class="main">Thank you for your order!</h2><br></br>
             <p class="main">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
             <p class="main">Shipping Address: <?php echo $_SESSION['userAddress'];?></p><br>
             <p class="main">Phone: <?php echo $_SESSION['userPhone'];?></p><br>

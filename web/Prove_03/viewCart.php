@@ -22,16 +22,15 @@
     </head>
     <body>
         <div class="standardText">
-            <h2>Your Shopping Cart</h2><br></br>
+            <h2 class="main">Your Shopping Cart</h2><br></br>
 <?php
     if(!empty($_SESSION['order']))
     {
         foreach ($_SESSION['order'] as $cart)
         {
-            echo "$" . $cart . "<br>";
+            echo "<p class=\"main\">$" . $cart . "</p><br>";
         }
     }
-    echo "</p>";
 ?>
 
         <p class="main">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>

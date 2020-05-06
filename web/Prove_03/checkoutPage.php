@@ -12,8 +12,8 @@
         <script type="text/javascript" src="prove03_script.js"></script>
     </head>
     <body>
-        <h1 class="standardText">Checkout</h1>
         <div class="standardText">
+        <h1 class="main">Checkout</h1>
         <form class="main" action="confirmationPage.php" method="POST" onsubmit="return submitConfirmation()">
             <h3>Please tell us where to ship.</h3>
             <div>Address: <input class="inputField" id="address" style="background-color:#f7f7ff; width:25%; text-align:right;" type="text" name="address" onchange="changeToUpperCase(this.id)"><br><br /></div>
