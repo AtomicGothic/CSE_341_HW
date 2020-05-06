@@ -18,15 +18,15 @@ $places = htmlspecialchars($_POST["places"])
     <p><b>Email: </b><span><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></span></p>
     <p><b>Major: </b><span><?php echo $major ?></span></p>
     <p><b>Comments: </b><span><?php echo $comments ?></span></p>
-    <p><b>Places: </b><span>
-        <?php echo
+    <?php echo "<p><b>Places: </b><span>";
             if(!empty($places))
             {
                 foreach ($places as $visited)
                 {
                     echo "$" . $visited . "<br>";
                 }
-            } ?>
-        </span></p>
+            }
+            echo "</span></p>";
+    ?>
 </body>
 </html>
