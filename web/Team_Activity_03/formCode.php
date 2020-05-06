@@ -3,6 +3,7 @@ $name = htmlspecialchars($_POST["userName"]);
 $email = htmlspecialchars($_POST["userEmail"]);
 $major = htmlspecialchars($_POST["major"]);
 $comments = htmlspecialchars($_POST["comments"]);
+$places = htmlspecialchars($_POST["places"])
 ?>
 
 <!DOCTYPE html>
@@ -17,5 +18,15 @@ $comments = htmlspecialchars($_POST["comments"]);
     <p><b>Email: </b><span><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></span></p>
     <p><b>Major: </b><span><?php echo $major ?></span></p>
     <p><b>Comments: </b><span><?php echo $comments ?></span></p>
+    <p><b>Places: </b><span>
+        <?php echo
+            if(!empty($places))
+            {
+                foreach ($places as $visited)
+                {
+                    echo "$" . $visited . "<br>";
+                }
+            } ?>
+        </span></p>
 </body>
 </html>
