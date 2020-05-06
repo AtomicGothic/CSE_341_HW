@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿<?php
+session_start();
+?>
+
+<!DOCTYPE html>
 <html lang="en-us">
 <head>
     <meta charset="utf-8">
@@ -56,17 +60,8 @@
                 <br>
             </div>
             <div>Total: $<input id="total" class="inputField" style="background-color:#f7f7ff; text-align:right;" type="text" name="total" value="0.00" readonly><br><br /></div>
-            <div>
-                <p style="color:#f7f7ff; font-family:arial;">Card Type</p>
-                <input id="visa_card" class="inputField" type="radio" name="card" value="Visa" checked>Visa<br>
-                <input id="master_card" class="inputField" type="radio" name="card" value="Master">Master<br>
-                <input id="discover_card" class="inputField" type="radio" name="card" Value="Discover">Discover<br>
-                <input id="amex_card" class="inputField" type="radio" name="card" Value="American Express">American Express<br><br />
-            </div>
-            <div>Card #: <input id="credit_card" class="inputField" oninput="validateCardNumber()" style="background-color:#f7f7ff; text-align:right;" type="text" name="credit_card" value="xxxx-xxxx-xxxx-xxxx"><br><br /></div>
-            <div>Card Expiration Date: <input id="exp_date" class="inputField" oninput="validateCardExpiry()" style="background-color:#f7f7ff; text-align:right;" type="text" name="exp_date" value="MM/YY"><br><br /></div>
-            <input id="submit_form" type="submit" value="Submit" name="submit">
-            <input id="reset_form" type="reset" value="Reset" name="reset"><br><br /><br />
+            <input id="submit_form" type="submit" value="View Cart" name="submit">
+            <input id="reset_form" type="reset" value="Clear Cart" name="reset"><br><br /><br />
         </form><br><br />
     </div>
     <footer class="standardText">

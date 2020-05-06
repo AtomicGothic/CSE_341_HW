@@ -81,12 +81,12 @@ function submitForm() {
     }
 
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "assign11.php", true);
+    xhttp.open("POST", "confirmOrder.php", true);
     xhttp.send();
 }
 
 function submitConfirmation() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "assign11_a.php", true);
+    xhttp.open("POST", "cancellationPage.php", true);
     xhttp.send();
 }
