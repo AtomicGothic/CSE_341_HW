@@ -1,14 +1,5 @@
 <?php
     session_start();
-    $firstName = $_POST['first_name'];
-    $lastName = $_POST['last_name'];
-    $merchandise = $_POST['item'];
-    $total = $_POST['total'];
-
-    $_SESSION['firstName'] = $firstName;
-    $_SESSION['lastName'] = $lastName;
-    $_SESSION['order'] = $merchandise;
-    $_SESSION['totalPrice'] = $total;
 ?>
 
 <!DOCTYPE html>
