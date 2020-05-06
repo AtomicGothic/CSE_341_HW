@@ -25,9 +25,9 @@
 <?php
       echo  "<p class=\"main\">Your Cart: <br> ";
 
-    if(!empty($merchandise))
+    if(!empty($_SESSION['order']))
     {
-        foreach ($merchandise as $cart)
+        foreach ($_SESSION['order'] as $cart)
         {
             echo "$" . $cart . "<br>";
         }
@@ -35,7 +35,7 @@
     echo "</p>";
 ?>
 
-        <p class="main">Total: $<?php echo $total;?></p><br>
+        <p class="main">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
         <br></br>
     <footer class="standardText">
         <p>Posted by: Adam Goff</p>

@@ -24,8 +24,6 @@
         <div class="standardText">
             <h2>Your Shopping Cart</h2><br></br>
 <?php
-      echo  "<p class=\"main\">Your Cart: <br> ";
-
     if(!empty($_SESSION['order']))
     {
         foreach ($_SESSION['order'] as $cart)
