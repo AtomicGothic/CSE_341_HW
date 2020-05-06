@@ -28,7 +28,7 @@
                         {
                             foreach ($_SESSION['order'] as $cart)
                             {
-                                echo "$" . $cart . "<br>";
+                                echo "->$" . $cart . "<br>";
                             }
                             }
                     echo "</p>";
@@ -39,7 +39,7 @@
         </form>
         </div>
         <div class="standardText">
-            <button class="main" id="returnToCart" type="button" onclick="window.location.href = '../viewCart.php';">Back to Cart</button><br><br /><br />
+            <button class="main" id="returnToCart" type="button" onclick="window.location.href = '../Prove_03/viewCart.php';">Back to Cart</button><br><br /><br />
         </div>
             <footer class="standardText">
             <p>Posted by: Adam Goff</p>

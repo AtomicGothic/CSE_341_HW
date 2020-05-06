@@ -28,7 +28,7 @@
     {
         foreach ($_SESSION['order'] as $cart)
         {
-            echo "<p class=\"main\">$" . $cart . "</p><br>";
+            echo "<p class=\"main\">->$" . $cart . "</p>";
         }
     }
 ?>
@@ -39,8 +39,10 @@
         <div class="standardText">
             <form class="main" action="checkoutPage.php" method="POST" onsubmit="return toCheckout()">
                 <input id="submit_form" type="submit" value="Confirm" name="confirm">
-                <input id="cancel_form" type="submit" value="Cancel" name="cancel"><br><br /><br />
             </form>
+        </div>
+        <div class="standardText">
+            <button class="main" id="returnToCart" type="button" onclick="window.location.href = '../Prove_03/orderCatalog.php';">Back to Cart</button><br><br /><br />
         </div>
     <footer class="standardText">
         <p>Posted by: Adam Goff</p>
