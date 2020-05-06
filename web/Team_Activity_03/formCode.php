@@ -11,7 +11,7 @@ $places = $_POST["places"];
     "Asia is a very beautiful place.  There are many types of activities for all, between the nightlife, beaches, and quiet places to meditate." => "3",
     "Australia: Kangaroos, koalas, and the Great Barrier Reef. So many different places to visit." => "4",
     "Since you have visited Africa, you know that it is the 2nd largest continent in both land and in population.  There are only a few parts of the continent that you'd consider cold." => "5",
-    "Antarctica.  Guess what? Its cold.  And penguins.  Lots of ice.  But it has penguins!" => "6",
+    "Antarctica.  Guess what? Its cold.  And penguins.  Lots of ice.  But it has penguins!" => "6"
 );
 ?>
 ​
