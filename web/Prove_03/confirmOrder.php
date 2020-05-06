@@ -40,7 +40,7 @@
       echo "</p><br></br>
         </div>
         <div class=\"standardText\">
-            <form class=\"main\" action=\"prove03_a.php\" method=\"POST\" onsubmit=\"return submitConfirmation()\">
+            <form class=\"main\" action=\"cancellationPage.php\" method=\"POST\" onsubmit=\"return submitConfirmation()\">
                 <input id=\"submit_form\" type=\"submit\" value=\"Confirm\" name=\"confirm\">
                 <input id=\"cancel_form\" type=\"submit\" value=\"Cancel\" name=\"cancel\"><br><br /><br />
             </form>
