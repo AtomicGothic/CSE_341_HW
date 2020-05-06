@@ -6,7 +6,7 @@
     <meta charset="utf-8">
 </head>
 <body id="mainBody">
-    <form action="formCode.php" method="post">
+    <form action="formCodeCopy.php" method="post">
         <!--User Name and Email-->
         <label for="userName">Name: <input type="text" name="userName"></label><br>
         <label for="userEmail">Email: <input type="text" name="userEmail"></label><br>

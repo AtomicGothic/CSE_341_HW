@@ -13,42 +13,5 @@ $places = $_POST["places"];
     "Since you have visited Africa, you know that it is the 2nd largest continent in both land and in population.  There are only a few parts of the continent that you'd consider cold." => "5",
     "Antarctica.  Guess what? Its cold.  And penguins.  Lots of ice.  But it has penguins!" => "6",
 );
+print_r($_POST);
 ?>
-​
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <title>Team Activity 03</title>
-    <meta name=viewport content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-</head>
-<body id="mainBody">
-    <p><b>Name: </b><span><?php echo $name ?></span></p>
-    <p><b>Email: </b><span><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></span></p>
-    <p><b>Major: </b><span><?php echo $major ?></span></p>
-    <p><b>Comments: </b><span><?php echo $comments ?></span></p>
-    <?php echo "<p><b>Places: </b><span>";
-            if(!empty($places))
-            {
-                foreach ($places as $visited)
-                {
-                    $visited_clean = htmlspecialchars($visited);
-                    echo $visited . "<br>";
-                }
-            }
-            echo "</span></p>";
-    ?>
- <h4>Basic info on places you've visited</h4>
- 
-<?php
-      $countryNumber = 1;
-        foreach($places as $visited) {
-            echo "<p>Country {$countryNumber}: ";
-            echo array_search($visited, $information);
-            echo "</p>";
-            $countryNumber++;
-        }
-?>
-
-</body>
-</html>
