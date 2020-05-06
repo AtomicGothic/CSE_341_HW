@@ -40,7 +40,7 @@
         <br></br>
         </div>
         <div class="standardText">
-            <form class="main" action="cancellationPage.php" method="POST" onsubmit="return toCheckout()">
+            <form class="main" action="checkoutPage.php" method="POST" onsubmit="return toCheckout()">
                 <input id="submit_form" type="submit" value="Confirm" name="confirm">
                 <input id="cancel_form" type="submit" value="Cancel" name="cancel"><br><br /><br />
             </form>
