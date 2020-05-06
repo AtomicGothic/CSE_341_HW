@@ -19,6 +19,7 @@ $places = htmlspecialchars($_POST["places"])
     <p><b>Major: </b><span><?php echo $major ?></span></p>
     <p><b>Comments: </b><span><?php echo $comments ?></span></p>
     <?php echo "<p><b>Places: </b><span>";
+    echo $places;
             if(!empty($places))
             {
                 foreach ($places as $visited)
