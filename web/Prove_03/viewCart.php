@@ -17,15 +17,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="prove03_styleSheet.css">
-        <title>Confirm Order</title>
+        <title>Your Cart</title>
         <script type="text/javascript" src="prove03_script.js"></script>
     </head>
     <body>
         <div class="standardText">
-            <h2>Please Review Your Order</h2><br></br>
-            <p class="main">Name: <?php echo $firstName . " " . $lastName;?></p><br>
-            <p class="main">Shipping Address: <?php echo $address;?></p><br>
-            <p class="main">Phone: <?php echo $phoneNumber;?></p><br>
+            <h2>Your Shopping Cart</h2><br></br>
 <?php
       echo  "<p class=\"main\">Your Cart: <br> ";
 
@@ -43,7 +40,7 @@
         <br></br>
         </div>
         <div class="standardText">
-            <form class="main" action="cancellationPage.php" method="POST" onsubmit="return submitConfirmation()">
+            <form class="main" action="cancellationPage.php" method="POST" onsubmit="return toCheckout()">
                 <input id="submit_form" type="submit" value="Confirm" name="confirm">
                 <input id="cancel_form" type="submit" value="Cancel" name="cancel"><br><br /><br />
             </form>

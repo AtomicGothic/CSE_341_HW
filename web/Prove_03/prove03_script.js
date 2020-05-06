@@ -70,7 +70,7 @@ function focusFirstElement() {
     document.getElementById('first_name').focus();
 }
 
-function submitForm() {
+function submitOrder() {
     let formList = document.getElementsByClassName('inputField');
 
     for (let i = 0; i < formList.length; i++) {
@@ -81,12 +81,18 @@ function submitForm() {
     }
 
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "confirmOrder.php", true);
+    xhttp.open("POST", "viewCart.php", true);
+    xhttp.send();
+}
+
+function toCheckout() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "checkoutPage.php", true);
     xhttp.send();
 }
 
 function submitConfirmation() {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("POST", "cancellationPage.php", true);
+    xhttp.open("POST", "confirmationPage.php", true);
     xhttp.send();
 }
