@@ -13,12 +13,10 @@ session_start();
 </head>
 <body onload="focusFirstElement()">
     <div class="standardText">
-        <p class="main" style="font-size: 20px;">Your Shopping Cart</p>
+        <p class="main" style="font-size: 20px;">Welcome to Omega Games & Accessories</p>
         <form class="main" action="viewCart.php" method="POST" onreset="focusFirstElement()" onsubmit="return submitOrder()">
             <div>First Name: <input class="inputField" id="first_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="first_name" onchange="changeToUpperCase(this.id)"><br><br /></div>
             <div>Last Name: <input class="inputField" id="last_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="last_name" onchange="changeToUpperCase(this.id)"><br><br /></div>
-            <div>Address: <input class="inputField" id="address" style="background-color:#f7f7ff; width:25%; text-align:right;" type="text" name="address" onchange="changeToUpperCase(this.id)"><br><br /></div>
-            <div>Phone: <input class="inputField" id="phone" style="background-color:#f7f7ff; text-align:right;" type="text" name="phone" value="xxx-xxx-xxxx" oninput="validatePhoneNumber()"><br><br /></div>
             <div>
                 <table class="inputField" style="width:100%; color:#181717 /*Eerie Black*/ ;font-family:arial; background-color:#a3a19f /*Quick Silver*/;">
                     <tr>
