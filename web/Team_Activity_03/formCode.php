@@ -4,8 +4,7 @@ $email = htmlspecialchars($_POST["userEmail"]);
 $major = htmlspecialchars($_POST["major"]);
 $comments = htmlspecialchars($_POST["comments"]);
 $places = $_POST["places"];
-​
-$information = array(
+​$information = array(
     "North America is pretty cool.  Lots of people live there" => "0",
     "South America is below North America.  It is very beautiful and has a very long and interesting history" => "1",
     "Europe is amazing.  It unfortunately has been the site of 2 World Wars.  There are many historical sites worth visiting though." => "2",
@@ -28,7 +27,7 @@ $information = array(
     <p><b>Email: </b><span><a href="mailto:<?php echo $email ?>"><?php echo $email ?></a></span></p>
     <p><b>Major: </b><span><?php echo $major ?></span></p>
     <p><b>Comments: </b><span><?php echo $comments ?></span></p>
-    <!-- <?php echo "<p><b>Places: </b><span>";
+    <?php echo "<p><b>Places: </b><span>";
             if(!empty($places))
             {
                 foreach ($places as $visited)
@@ -38,7 +37,7 @@ $information = array(
                 }
             }
             echo "</span></p>";
-    ?> -->
+    ?>
     <h4>Basic info on places you've visited</h4>
 <?php
         $countryNumber = 1;
