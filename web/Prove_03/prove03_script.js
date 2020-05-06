@@ -71,14 +71,7 @@ function focusFirstElement() {
 }
 
 function submitOrder() {
-    let formList = document.getElementsByClassName('inputField');
 
-    for (let i = 0; i < formList.length; i++) {
-        if (formList[i].value == "" || !validatePhoneNumber() || !validateCardNumber() || !validateCardExpiry()) {
-            formList[i].focus();
-            return false;
-        }
-    }
 
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "viewCart.php", true);
@@ -92,6 +85,15 @@ function toCheckout() {
 }
 
 function submitConfirmation() {
+ /*   let formList = document.getElementsByClassName('inputField');
+
+    for (let i = 0; i < formList.length; i++) {
+        if (formList[i].value == "" || !validatePhoneNumber() || !validateCardNumber() || !validateCardExpiry()) {
+            formList[i].focus();
+            return false;
+        }
+    }
+*/
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "confirmationPage.php", true);
     xhttp.send();
