@@ -12,7 +12,7 @@
         <script type="text/javascript" src="prove03_script.js"></script>
     </head>
     <body>
-        <h2 class="standardText">Checkout</h2>
+        <h1 class="standardText">Checkout</h1>
         <div class="standardText">
             <h3>Please tell us where to ship.</h3>
             <div>Address: <input class="inputField" id="address" style="background-color:#f7f7ff; width:25%; text-align:right;" type="text" name="address" onchange="changeToUpperCase(this.id)"><br><br /></div>
@@ -23,7 +23,7 @@
 <?php
      echo  "<p class=\"main\">Your Cart: <br> ";
 
-        if(!empty($merchandise))
+        if(!empty($_SESSION['order']))
         {
             foreach ($_SESSION['order'] as $cart)
             {
@@ -39,7 +39,7 @@
             <form class="main" action="confirmationPage.php" method="POST" onsubmit="return submitConfirmation()">
                 <input id="submit_form" type="submit" value="Confirm" name="confirm">
             </form>
-            <button id="returnToCart" type="button" onclick="window.location.href = '../viewCart.php';">Back to Cart</button><br><br /><br />
+            <button class="main" id="returnToCart" type="button" onclick="window.location.href = '../viewCart.php';">Back to Cart</button><br><br /><br />
         </div>
             <footer class="standardText">
             <p>Posted by: Adam Goff</p>
