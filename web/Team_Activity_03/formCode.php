@@ -3,7 +3,7 @@ $name = htmlspecialchars($_POST["userName"]);
 $email = htmlspecialchars($_POST["userEmail"]);
 $major = htmlspecialchars($_POST["major"]);
 $comments = htmlspecialchars($_POST["comments"]);
-$places = htmlspecialchars($_POST["places"]);
+$places = $_POST["places"];
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +24,7 @@ $places = htmlspecialchars($_POST["places"]);
             {
                 foreach ($places as $visited)
                 {
+                    $visited_clean = htmlspecialchars($visited);
                     echo $visited . "<br>";
                 }
             }
