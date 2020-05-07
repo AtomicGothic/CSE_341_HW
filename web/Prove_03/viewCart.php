@@ -1,9 +1,9 @@
 <?php
     session_start();
-    $firstName = $_POST['first_name'];
-    $lastName = $_POST['last_name'];
+    $firstName = htmlspecialchars($_POST['first_name']);
+    $lastName = htmlspecialchars($_POST['last_name']);
     $merchandise = $_POST['item'];
-    $total = $_POST['total'];
+    $total = htmlspecialchars($_POST['total']);
 
     $_SESSION['firstName'] = $firstName;
     $_SESSION['lastName'] = $lastName;
@@ -32,7 +32,8 @@
                         $i = 0;
                         foreach ($_SESSION['order'] as $cart)
                         {
-                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" onclick=\"calculateTotal(this.id, this.value)\" checked>$" . $cart . "</td><br>";
+                            $cleaned_cart = htmlspecialchars($cart);
+                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cleaned_cart . "\" onclick=\"calculateTotal(this.id, this.value)\" checked>$" . $cleaned_cart . "</td><br>";
                             $i = $i + 1;
                         }
                     }
