@@ -39,7 +39,9 @@
         </form>
         </div>
         <div class="standardText">
-            <button class="main" id="returnToCart" type="button" onclick="window.location.href = '../Prove_03/viewCart.php';">Back to Cart</button><br><br /><br />
+            <form class="main" action="viewCart.php" method="POST" onsubmit="return toCart()">
+                <input id="submit_form" type="submit" value="Back to Cart" name="backToCart">
+            </form>
         </div>
             <footer class="standardText">
             <p>Posted by: Adam Goff</p>

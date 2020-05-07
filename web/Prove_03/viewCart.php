@@ -42,7 +42,9 @@
             </form>
         </div>
         <div class="standardText">
-            <button class="main" id="returnToCart" type="button" onclick="window.location.href = '../Prove_03/orderCatalog.php';">Back to Cart</button><br><br /><br />
+            <form class="main" action="orderCatalog.php" method="POST" onsubmit="return toOrderCatalog()">
+                <input id="submit_form" type="submit" value="Confirm" name="confirm">
+            </form>
         </div>
     <footer class="standardText">
         <p>Posted by: Adam Goff</p>

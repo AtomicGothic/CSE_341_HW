@@ -14,7 +14,7 @@
 <body onload="focusFirstElement()">
     <div class="standardText">
         <p class="main" style="font-size: 20px;">Welcome to Omega Games & Accessories</p>
-        <form class="main" action="viewCart.php" method="POST" onreset="focusFirstElement()" onsubmit="return submitOrder()">
+        <form class="main" action="viewCart.php" method="POST" onreset="focusFirstElement()" onsubmit="return toCart()">
             <div>First Name: <input class="inputField" id="first_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="first_name" onchange="changeToUpperCase(this.id)"><br><br /></div>
             <div>Last Name: <input class="inputField" id="last_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="last_name" onchange="changeToUpperCase(this.id)"><br><br /></div>
             <div>

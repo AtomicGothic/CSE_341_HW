@@ -33,7 +33,13 @@ function focusFirstElement() {
     document.getElementById('first_name').focus();
 }
 
-function submitOrder() {
+function toOrderCatalog() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "orderCatalog.php", true);
+    xhttp.send();
+}
+
+function toCart() {
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "viewCart.php", true);
     xhttp.send();
