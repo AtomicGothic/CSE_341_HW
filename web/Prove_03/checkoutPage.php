@@ -34,7 +34,8 @@
                         $i = 0;
                         foreach ($_SESSION['order'] as $cart)
                         {
-                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" onclick=\"return false\" checked>$" . $cart . "</td><br>";
+                            $cleaned_cart = htmlspecialchars($cart);
+                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cleaned_cart . "\" onclick=\"return false\" checked>$" . $cleaned_cart . "</td><br>";
                             $i = $i + 1;
                         }
                     }

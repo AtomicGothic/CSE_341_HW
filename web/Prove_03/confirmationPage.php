@@ -28,7 +28,8 @@
     {
         foreach ($_SESSION['order'] as $cart)
         {
-            echo "$" . $cart . "<br>";
+            $cleaned_cart = htmlspecialchars($cart);
+            echo "$" . $cleaned_cart . "<br>";
         }
     }
     echo "</p>";
