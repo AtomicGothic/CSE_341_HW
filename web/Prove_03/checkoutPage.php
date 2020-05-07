@@ -20,20 +20,20 @@
             <h3>What is your best contact number?</h3>
             <div>Phone: <input class="inputField" id="phone" style="background-color:#f7f7ff; text-align:right;" type="text" name="phone" value="xxx-xxx-xxxx" oninput="validatePhoneNumber()"><br><br /></div>
             <h3>Please Review Your Order</h3><br></br>
-            <p class="main">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
-                <?php
-                    echo  "<p class=\"main\">Your Cart: <br> ";
-
-                        if(!empty($_SESSION['order']))
+            <div>First Name: <input class="inputField" id="first_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="first_name" value="<?php echo $_SESSION['firstName'];?>" readonly><br><br /></div>
+            <div>Last Name: <input class="inputField" id="last_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="last_name" value="<?php echo $_SESSION['lastName'];?>" readonly><br><br /></div>
+            <?php
+                    if(!empty($_SESSION['order']))
+                    {
+                        $i = 0;
+                        foreach ($_SESSION['order'] as $cart)
                         {
-                            foreach ($_SESSION['order'] as $cart)
-                            {
-                                echo "->$" . $cart . "<br>";
-                            }
-                            }
-                    echo "</p>";
-                ?>
-            <p class="main">Total: <?php echo $_SESSION['totalPrice'];?></p><br>
+                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" onclick=\"calculateTotal(this.id, this.value)\" checked>$" . $cart . "</td><br>";
+                            $i = $i + 1;
+                        }
+                    }
+            ?>
+            <div>Total: $<input id="total" class="inputField" style="background-color:#f7f7ff; text-align:right;" type="text" name="total" value="<?php echo $_SESSION['totalPrice']?>" readonly><br><br /></div>
             <br></br>
             <input id="submit_form" type="submit" value="Confirm" name="confirm">
         </form>
