@@ -24,7 +24,7 @@
         <div class="standardText">
             <h2 class="main">Your Shopping Cart</h2><br></br>
             <form class="main" action="viewCart.php" method="POST" onsubmit="return refreshCart()">
-                <p class="main">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
+                <p class="main" name="first_name">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
                 <?php
                     if(!empty($_SESSION['order']))
                     {
@@ -36,7 +36,7 @@
                         }
                     }
                 ?>
-                <p class="main">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
+                <p class="main" name="total">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
                 <p class="main">Check the box to select to delete.</p>
                 <input id="submit_form" type="submit" value="Delete" name="deleteItem">
             </form>
