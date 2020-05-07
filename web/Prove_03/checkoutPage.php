@@ -19,8 +19,9 @@
             <div>Address: <input class="inputField" id="address" style="background-color:#f7f7ff; width:25%; text-align:right;" type="text" name="address" onchange="changeToUpperCase(this.id)"><br><br /></div>
             <h3>What is your best contact number?</h3>
             <div>Phone: <input class="inputField" id="phone" style="background-color:#f7f7ff; text-align:right;" type="text" name="phone" value="xxx-xxx-xxxx" oninput="validatePhoneNumber()"><br><br /></div>
-            <h3>Please Review Your Order</h3><br></br>
+            <h3>Please Review Your Order</h3>
             <input id="submit_form" type="submit" value="Confirm" name="confirm">
+            <br></br>
         </form>
         </div>
         <div class="standardText">
@@ -33,7 +34,7 @@
                         $i = 0;
                         foreach ($_SESSION['order'] as $cart)
                         {
-                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" onclick=\"calculateTotal(this.id, this.value)\" checked>$" . $cart . "</td><br>";
+                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" onclick=\"checkboxReadOnly()\" checked>$" . $cart . "</td><br>";
                             $i = $i + 1;
                         }
                     }

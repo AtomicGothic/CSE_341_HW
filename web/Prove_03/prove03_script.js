@@ -24,6 +24,10 @@ function validatePhoneNumber() {
     }
 }
 
+function checkboxReadOnly() {
+    return false;
+}
+
 function changeToUpperCase(id) {
     let tempElement = document.getElementById(id);
     tempElement.value = tempElement.value.toUpperCase();
