@@ -32,12 +32,12 @@
                         $i = 0;
                         foreach ($_SESSION['order'] as $cart)
                         {
-                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" checked>$" . $cart . "</td><br>";
+                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" onclick=\"calculateTotal(this.id, this.value)\" checked>$" . $cart . "</td><br>";
                             $i = $i + 1;
                         }
                     }
                 ?>
-                <p class="main" id="total">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
+                <div>Total: $<input id="total" class="inputField" style="background-color:#f7f7ff; text-align:right;" type="text" name="total" value="<?php echo $_SESSION['totalPrice']?>" readonly><br><br /></div>
                 <p class="main">Un-check the boxes of items you want to delete.</p>
                 <input id="submit_form" type="submit" value="Delete" name="deleteItem">
             </form>
