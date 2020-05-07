@@ -38,6 +38,7 @@
                 ?>
                 <p class="main">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
                 <p class="main">Check the box to select to delete.</p>
+                <input id="submit_form" type="submit" value="Delete" name="deleteItem">
             </form>
         <br></br>
         </div>
