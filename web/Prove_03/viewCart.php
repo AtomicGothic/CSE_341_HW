@@ -26,9 +26,12 @@
 <?php
     if(!empty($_SESSION['order']))
     {
+        $i = 0;
         foreach ($_SESSION['order'] as $cart)
         {
-            echo "<p class=\"main\">->$" . $cart . "</p>";
+            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\">" . $cart . "</td>";
+            //echo "<p class=\"main\">->$" . $cart . "</p>";
+            $i = $i + 1;
         }
     }
 ?>
@@ -43,7 +46,7 @@
         </div>
         <div class="standardText">
             <form class="main" action="orderCatalog.php" method="POST" onsubmit="return toOrderCatalog()">
-                <input id="submit_form" type="submit" value="Confirm" name="confirm">
+                <input id="submit_form" type="submit" value="Back to Catalog" name="toCatalog">
             </form>
         </div>
     <footer class="standardText">
