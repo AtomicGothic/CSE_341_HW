@@ -24,20 +24,20 @@
         <div class="standardText">
             <h2 class="main">Your Shopping Cart</h2><br></br>
             <form class="main" action="viewCart.php" method="POST" onsubmit="return refreshCart()">
-                <p class="main" name="first_name">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
+                <p class="main" id="first_name">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
                 <?php
                     if(!empty($_SESSION['order']))
                     {
                         $i = 0;
                         foreach ($_SESSION['order'] as $cart)
                         {
-                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\">$" . $cart . "</td><br>";
+                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\" checked>$" . $cart . "</td><br>";
                             $i = $i + 1;
                         }
                     }
                 ?>
-                <p class="main" name="total">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
-                <p class="main">Check the box to select to delete.</p>
+                <p class="main" id="total">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
+                <p class="main">Un-check the boxes of items you want to delete.</p>
                 <input id="submit_form" type="submit" value="Delete" name="deleteItem">
             </form>
         <br></br>
