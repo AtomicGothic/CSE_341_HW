@@ -45,6 +45,12 @@ function toCart() {
     xhttp.send();
 }
 
+function refreshCart() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("POST", "viewCart.php", true);
+    xhttp.send();
+}
+
 function toCheckout() {
     var xhttp = new XMLHttpRequest();
     xhttp.open("POST", "checkoutPage.php", true);

@@ -23,20 +23,22 @@
     <body>
         <div class="standardText">
             <h2 class="main">Your Shopping Cart</h2><br></br>
-<?php
-    if(!empty($_SESSION['order']))
-    {
-        $i = 0;
-        foreach ($_SESSION['order'] as $cart)
-        {
-            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\">" . $cart . "</td>";
-            //echo "<p class=\"main\">->$" . $cart . "</p>";
-            $i = $i + 1;
-        }
-    }
-?>
-
-        <p class="main">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
+            <form class="main" action="viewCart.php" method="POST" onsubmit="return refreshCart()">
+                <p class="main">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
+                <?php
+                    if(!empty($_SESSION['order']))
+                    {
+                        $i = 0;
+                        foreach ($_SESSION['order'] as $cart)
+                        {
+                            echo "<input id=\"item_" . $i . "\" type=\"checkbox\" name=\"item[]\" value=\"" . $cart . "\">$" . $cart . "</td><br>";
+                            $i = $i + 1;
+                        }
+                    }
+                ?>
+                <p class="main">Total: $<?php echo $_SESSION['totalPrice'];?></p><br>
+                <p class="main">Check the box to select to delete.</p>
+            </form>
         <br></br>
         </div>
         <div class="standardText">
