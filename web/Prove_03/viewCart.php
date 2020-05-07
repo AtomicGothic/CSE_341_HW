@@ -24,7 +24,8 @@
         <div class="standardText">
             <h2 class="main">Your Shopping Cart</h2><br></br>
             <form class="main" action="viewCart.php" method="POST" onsubmit="return refreshCart()">
-                <p class="main" id="first_name">Name: <?php echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];?></p><br>
+            <div>First Name: <input class="inputField" id="first_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="first_name" value="<?php echo $_SESSION['firstName'];?>" readonly><br><br /></div>
+            <div>Last Name: <input class="inputField" id="last_name" style="background-color:#f7f7ff; text-align:right;" type="text" name="last_name" value="<?php echo $_SESSION['lastName'];?>" readonly><br><br /></div>
                 <?php
                     if(!empty($_SESSION['order']))
                     {
