@@ -1,7 +1,7 @@
 <?php
     function search() {
-        echo "<div class=\"standardText\"><form class=\"main\" method='post' action='scrip-results.php'>";
-        echo "<input type='text' name='Search by car make, model, and year.'>";
+        echo "<div class=\"standardText\"><form class=\"main\" method='post' action='car_part_query_results.php'>";
+        echo "<input type='text' name='carType'>";
         echo "<button type='submit'>Search</button>";
         echo "</form></div>";
     }
@@ -45,9 +45,10 @@
 </head>
 <body onload="focusFirstElement()">
 <div class="standardText">
-        <p class="main" style="font-size: 20px;">Welcome to Goff's Brakes and Tires!</p>
+        <h1 class="main" style="font-size: 20px;">Welcome to Goff's Brakes and Tires!</h1>
+        <p class="main">Please type in your car make:</p>
+        <?php search();?>
 </div>
-    <?php search();?>
     <footer class="standardText">
         <p>Posted by: Adam Goff</p>
         <p>Contact information: <a href="mailto:quiryquark@byui.edu" target="_blank">quirkyquark@byui.edu</a>.</p><br>
