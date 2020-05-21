@@ -62,7 +62,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="prove05_styleSheet.css">
     <title>Adam Goff's Assignment 5</title>
-    <script type="text/javascript" src="prove05_script.js"></script>
+    <script src="prove05_script.js"></script>
 </head>
 <body>
     <div class="standardText">

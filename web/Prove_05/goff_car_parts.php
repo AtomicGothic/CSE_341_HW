@@ -1,6 +1,6 @@
 <?php
     function search() {
-        echo "<div class=\"standardText\"><form class=\"main\" method='post' action='car_part_query_results.php'>";
+        echo "<div class=\"standardText\"><form class=\"main\" method='POST' action='car_part_query_results.php'>";
         echo "<input type='text' name='carType'>";
         echo "<button type='submit'>Search</button>";
         echo "</form></div>";
@@ -41,7 +41,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="prove05_styleSheet.css">
     <title>Adam Goff's Assignment 5</title>
-    <script type="text/javascript" src="prove05_script.js"></script>
+    <script src="prove05_script.js"></script>
 </head>
 <body onload="focusFirstElement()">
 <div class="standardText">
