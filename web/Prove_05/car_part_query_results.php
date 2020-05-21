@@ -1,4 +1,5 @@
 <?php
+    session_start();
 
     try
     {
@@ -53,9 +54,7 @@
     }
 
 ?>
-<?php
-    session_start();
-?>
+
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
