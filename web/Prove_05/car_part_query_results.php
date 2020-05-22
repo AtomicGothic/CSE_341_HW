@@ -35,7 +35,7 @@
 
     function searchQuery($name, $db) {
         //$stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE car_type.car_make = :name AND car_type.id = car_brakes.car_type_id");
-        $stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE 'car_type.car_make' LIKE \"%:name%\" AND car_type.id = car_brakes.car_type_id");
+        $stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE ('car_type.car_make' LIKE :'%"name%"'\) AND car_type.id = car_brakes.car_type_id");
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
         $stmt->execute();
         $carType = $stmt->fetchAll(PDO::FETCH_ASSOC);
