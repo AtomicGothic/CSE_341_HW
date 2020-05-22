@@ -35,18 +35,18 @@
 
     function searchQuery($name, $db) {
         // $db=dbConnection();
-        $stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE carType = $name AND car_type.id = car_brakes.car_type_id");
+        $stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE car_type.car_make = :name AND car_type.id = car_brakes.car_type_id");
         //$name= '$name';
-        //$stmt->bindValue(':name', $name, PDO::PARAM_STR);
+        $stmt->bindValue(':name', $name, PDO::PARAM_STR);
         $stmt->execute();
         $carType = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $carType;
     }
 
     // If the page loads as a POST request, look for this variable, and if it is set
-    if(isset($_POST['carType'])) {
+    if(isset($_POST['car_type'])) {
         // Validate & sanitize the input
-        $searchText = validateInput($_POST['carType']);
+        $searchText = validateInput($_POST['car_type']);
         // Now run the query to find the text in the database, and then save the results as a variable
         $carType = searchQuery($searchText, $db);
         // Change the method name

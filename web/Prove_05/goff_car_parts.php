@@ -1,7 +1,7 @@
 <?php
     function search() {
         echo "<div class=\"standardText\"><form class=\"main\" method='POST' action='car_part_query_results.php'>";
-        echo "<input type='text' name='carType'>";
+        echo "<input type='text' name='car_type'>";
         echo "<button type='submit'>Search</button>";
         echo "</form></div>";
     }
