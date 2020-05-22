@@ -74,6 +74,7 @@
                 echo '<br/><br/>';
             }
         ?>
+        <button onclick="window.location.href = '../Prove_05/goff_car_parts.php';">Back to Search</button>
     </div>
 <footer class="standardText">
     <p>Posted by: Adam Goff</p>
