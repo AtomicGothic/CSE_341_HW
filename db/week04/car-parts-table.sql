@@ -94,104 +94,104 @@ INSERT INTO car_type (car_make, car_model, car_year)
 
 --Toyota Prius 2016
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (1, 'Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
+    VALUES (1, '(Toyota Prius 2016) Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
 
 --Toyota Prius 2017
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (2, 'Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
+    VALUES (2, '(Toyota Prius 2017) Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
 
 --Toyota Prius 2018
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (3, 'Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
+    VALUES (3, '(Toyota Prius 2018) Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
 
 --Toyota Prius 2019
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (4, 'Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
+    VALUES (4, '(Toyota Prius 2019) Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
 
 --Toyota Prius 2020
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (5, 'Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
+    VALUES (5, '(Toyota Prius 2020) Front Brake: DYNAMIC FRICTION 1551118410 5000 Advanced');
 
 
 --Chevrolet Corvette 2016
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (6, 'Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
+    VALUES (6, '(Chevrolet Corvette 2016) Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
 
 --Chevrolet Corvette 2017
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (7, 'Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
+    VALUES (7, '(Chevrolet Corvette 2017) Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
 
 --Chevrolet Corvette 2018
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (8, 'Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
+    VALUES (8, '(Chevrolet Corvette 2018) Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
 
 --Chevrolet Corvette 2019
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (9, 'Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
+    VALUES (9, '(Chevrolet Corvette 2019) Front Brake: DYNAMIC FRICTION 1553100100 5000 Advanced');
 
 --Chevrolet Corvette 2020
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (10, 'Front Brake: ACDELCO 84197896 GM Original Equipment');
+    VALUES (10, '(Chevrolet Corvette 2020) Front Brake: ACDELCO 84197896 GM Original Equipment');
 
 
 --Ford Mustang 2016
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (11, 'Front Brake: CENTRIC 10517910 Posi-Quiet');
+    VALUES (11, '(Ford Mustang 2016) Front Brake: CENTRIC 10517910 Posi-Quiet');
 
 --Ford Mustang 2017
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (12, 'Front Brake: CENTRIC 10517910 Posi-Quiet');
+    VALUES (12, '(Ford Mustang 2017) Front Brake: CENTRIC 10517910 Posi-Quiet');
 
 --Ford Mustang 2018
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (13, 'Front Brake: DYNAMIC FRICTION 1551178400 5000 Advanced');
+    VALUES (13, '(Ford Mustang 2018) Front Brake: DYNAMIC FRICTION 1551178400 5000 Advanced');
 
 --Ford Mustang 2019
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (14, 'Front Brake: DYNAMIC FRICTION 1551178400 5000 Advanced');
+    VALUES (14, '(Ford Mustang 2019) Front Brake: DYNAMIC FRICTION 1551178400 5000 Advanced');
 
 --Ford Mustang 2020
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (15, 'Front Brake: DYNAMIC FRICTION 1551178400 5000 Advanced');
+    VALUES (15, '(Ford Mustang 2020) Front Brake: DYNAMIC FRICTION 1551178400 5000 Advanced');
 
 
 --Honda Civic 2016
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (16, 'Front Brake: MONROE CX914 Total Solution Ceramic');
+    VALUES (16, '(Honda Civic 2016) Front Brake: MONROE CX914 Total Solution Ceramic');
 
 --Honda Civic 2017
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (17, 'Front Brake: MONROE CX914 Total Solution Ceramic');
+    VALUES (17, '(Honda Civic 2017) Front Brake: MONROE CX914 Total Solution Ceramic');
 
 --Honda Civic 2018
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (18, 'Front Brake: MONROE CX914 Total Solution Ceramic');
+    VALUES (18, '(Honda Civic 2018) Front Brake: MONROE CX914 Total Solution Ceramic');
 
 --Honda Civic 2019
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (19, 'Front Brake: MONROE CX914 Total Solution Ceramic');
+    VALUES (19, '(Honda Civic 2019) Front Brake: MONROE CX914 Total Solution Ceramic');
 
 --Honda Civic 2020
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (20, 'Front Brake: MONROE CX914 Total Solution Ceramic');
+    VALUES (20, '(Honda Civic 2020) Front Brake: MONROE CX914 Total Solution Ceramic');
 
 
 --Jeep Wrangler 2016
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (21, 'Front Brake: MONROE CX1273 Total Solution Ceramic');
+    VALUES (21, '(Jeep Wrangler 2016) Front Brake: MONROE CX1273 Total Solution Ceramic');
 
 --Jeep Wrangler 2017
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (22, 'Front Brake: MONROE CX1273 Total Solution Ceramic');
+    VALUES (22, '(Jeep Wrangler 2017) Front Brake: MONROE CX1273 Total Solution Ceramic');
 
 --Jeep Wrangler 2018
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (23, 'Front Brake: MONROE CX1273 Total Solution Ceramic');
+    VALUES (23, '(Jeep Wrangler 2018) Front Brake: MONROE CX1273 Total Solution Ceramic');
 
 --Jeep Wragler 2019
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (24, 'Front Brake: MONROE CX1273 Total Solution Ceramic');
+    VALUES (24, '(Jeep Wrangler 2019) Front Brake: MONROE CX1273 Total Solution Ceramic');
 
 --Jeep Wrangler 2020
 INSERT INTO car_brakes (car_type_id, brake_pad)
-    VALUES (25, 'Front Brake: MONROE CX1273 Total Solution Ceramic');
+    VALUES (25, '(Jeep Wrangler 2020) Front Brake: MONROE CX1273 Total Solution Ceramic');
