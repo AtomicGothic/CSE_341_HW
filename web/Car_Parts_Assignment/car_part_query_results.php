@@ -69,6 +69,21 @@
         </form>
     <div class="standardText">
         <form class="main" action="update_parts.php" method="POST">
+        <?php
+            echo "<div class='standardText'>";
+            $i = 0;
+            try {
+                foreach ($carType as $row)
+                {
+                    echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
+                    echo '<br/><br/>';
+                    $i++;
+                }
+            } catch (Exception $ex) {
+                echo "ERROR: $ex";
+            }
+            echo "</div>";
+            ?>
             <input type="text" id="txtNew" name="txtNew">
             <label for="txtNew">Rename Here</label><br><br>
             <input id="form_update" type="submit" value="Update" name="update">
