@@ -14,10 +14,8 @@ try
     $carId = $db->lastInsertId("carTypeId_id_seq");
     $brakeId = $db->lastInsertId("carBrakesId_id_seq");
 
-    // Again, first prepare the statement
     $carStatement = $db->prepare('DELETE FROM carType_carBrakes WHERE carBrakesId = :carBrakesId');
 
-    // Then, bind the values
     $brakeStatement->bindValue(':carTypeId', $carId);
     $brakeStatement->bindValue(':carBrakesId', $brakeId);
 
