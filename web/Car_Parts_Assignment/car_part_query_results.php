@@ -51,7 +51,6 @@
         <h2 class="main">Car Parts Available</h2>
         <?php
             echo "<div class='standardText'>";
-            //$carParts = $db->query('SELECT car_brakes.brake_pad FROM car_type, car_brakes WHERE car_type.id = car_brakes.car_type_id')
             $i = 0;
             try {
                 foreach ($carType as $row)
@@ -64,7 +63,17 @@
                 echo "ERROR: $ex";
             }
             echo "</div>";
-        ?>
+            ?>
+    <div class="standardText">
+        <form class="main" action="remove_parts.php" method="POST">
+            <input id="form_delete" type="submit" value="Delete" name="delete">
+        </form>
+    </div>
+    <div class="standardText">
+        <form class="main" action="update_parts.php" method="POST">
+            <input id="form_update" type="submit" value="Update" name="update">
+        </form>
+    </div>
         <button class="main" onclick="window.location.href = '../Car_Parts_Assignment/goff_car_parts.php';">Back to Search</button>
     </div>
 <footer class="standardText">
