@@ -1,48 +1,47 @@
 <?
+session_start();
+
 // get the data from the POST
-$book = $_POST['txtBook'];
-$chapter = $_POST['txtChapter'];
-$verse = $_POST['txtVerse'];
-$content = $_POST['txtContent'];
-$topicIds = $_POST['chkTopics'];
+$carMake = $_POST['txtMake'];
+$carModel = $_POST['txtModel'];
+$carYear = $_POST['txtYear'];
+$carBrake = $_POST['txtBrake'];
 
 require("dbConnect.php");
 $db = get_db();
 
 try
 {
-	// Add the Scripture
-
 	// We do this by preparing the query with placeholder values
-	$query = 'INSERT INTO scripture(book, chapter, verse, content) VALUES(:book, :chapter, :verse, :content)';
-	$statement = $db->prepare($query);
+    $carQuery = 'INSERT INTO carType(carMake, carModel, carYear) VALUES(:carMake, :carModel, :carYear)';
+    $brakeQuery = 'INSERT INTO carBrakes(brakePad) VALUES(:carBrake)';
+    $carStatement = $db->prepare($carQuery);
+    $brakeStatement = $db->prepare($brakeQuery);
 
 	// Now we bind the values to the placeholders. This does some nice things
 	// including sanitizing the input with regard to sql commands.
-	$statement->bindValue(':book', $book);
-	$statement->bindValue(':chapter', $chapter);
-	$statement->bindValue(':verse', $verse);
-	$statement->bindValue(':content', $content);
+	$carStatement->bindValue(':carMake', $carMake);
+	$carStatement->bindValue(':carModel', $carModel);
+	$carStatement->bindValue(':carYear', $carYear);
+	$brakeStatement->bindValue(':carBrake', $carBrake);
 
-	$statement->execute();
+    $carStatement->execute();
+    $brakeStatement->execute();
 
 	// get the new id
-	$scriptureId = $db->lastInsertId("scripture_id_seq");
+    $carId = $db->lastInsertId("carType_id_seq");
+    $brakeId = $db->lastInsertId("carBrakes_id_seq");
 
-	// Now go through each topic id in the list from the user's checkboxes
-	foreach ($topicIds as $topicId)
-	{
-		echo "ScriptureId: $scriptureId, topicId: $topicId";
+    // Again, first prepare the statement
+    $carStatement = $db->prepare('INSERT INTO carType_carBrakes(carTypeId, carBrakesId) VALUES(:carTypeId, :carBrakesId)');
 
-		// Again, first prepare the statement
-		$statement = $db->prepare('INSERT INTO scripture_topic(scriptureId, topicId) VALUES(:scriptureId, :topicId)');
+    // Then, bind the values
+    $carStatement->bindValue(':carTypeId', $carId);
+    $carStatement->bindValue(':carBrakesId', $brakeId);
 
-		// Then, bind the values
-		$statement->bindValue(':scriptureId', $scriptureId);
-		$statement->bindValue(':topicId', $topicId);
+    $carStatement->execute();
 
-		$statement->execute();
-	}
+
 }
 catch (Exception $ex)
 {
@@ -55,9 +54,6 @@ catch (Exception $ex)
 
 header("Location: showTopics.php");
 
-die(); // we always include a die after redirects. In this case, there would be no
-       // harm if the user got the rest of the page, because there is nothing else
-       // but in general, there could be things after here that we don't want them
-       // to see.
+die();
 
 ?>

@@ -14,7 +14,7 @@
     }
 
     function searchQuery($name, $db) {
-        $stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE car_type.car_make = :name AND car_type.id = car_brakes.car_type_id");
+        $stmt = $db->prepare("SELECT * FROM carType, carBrakes WHERE carType.carMake = :name AND carType.id = carBrakes.carType_id");
         //$stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE ('car_type.car_make' LIKE \"%:name%\") AND car_type.id = car_brakes.car_type_id";
         $stmt->bindValue(':name', $name, PDO::PARAM_STR);
         $stmt->execute();
@@ -51,7 +51,7 @@
             $i = 0;
             foreach ($carType as $row)
             {
-                echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brake_pad'];
+                echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakePad'];
                 echo '<br/><br/>';
                 $i++;
             }
