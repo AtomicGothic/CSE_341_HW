@@ -18,7 +18,8 @@ try
     $brakeStatement->bindValue(':newBrake', $newBrake);
     foreach ($carBrake as $row)
     {
-        $brakeStatement->bindValue(':carBrake', $row);
+        $cleanedRow = htmlspecialchars($row);
+        $brakeStatement->bindValue(':carBrake', $cleanedRow);
     }
 
     $brakeStatement->execute();
