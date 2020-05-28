@@ -71,6 +71,8 @@
     </div>
     <div class="standardText">
         <form class="main" action="update_parts.php" method="POST">
+            <input type="text" id="txtNew" name="txtNew">
+            <label for="txtNew">Rename Here</label><br><br>
             <input id="form_update" type="submit" value="Update" name="update">
         </form>
     </div>
