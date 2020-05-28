@@ -11,8 +11,8 @@ try
 {
 
     // Delete the referenced ID first.
-    $carId = $db->lastInsertId("carType_id_seq");
-    $brakeId = $db->lastInsertId("carBrakes_id_seq");
+    $carId = $db->lastInsertId("carTypeId_id_seq");
+    $brakeId = $db->lastInsertId("carBrakesId_id_seq");
 
     // Again, first prepare the statement
     $carStatement = $db->prepare('DELETE FROM carType_carBrakes WHERE carBrakesId = :carBrakesId');
@@ -35,7 +35,7 @@ try
 }
 catch (Exception $ex)
 {
-	echo "Error with DB. Details: $ex";
+	echo "Error with DB. Details:<br> $ex";
 	die();
 }
 

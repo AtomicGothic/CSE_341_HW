@@ -35,7 +35,7 @@ try
 }
 catch (Exception $ex)
 {
-	echo "Error with DB. Details: $ex";
+	echo "Error with DB. Details:<br> $ex";
 	die();
 }
 
