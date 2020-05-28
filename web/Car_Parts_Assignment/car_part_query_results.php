@@ -49,6 +49,7 @@
 <body>
     <div class="standardText">
         <h2 class="main">Car Parts Available</h2>
+        <form class="main" action="remove_parts.php" method="POST">
         <?php
             echo "<div class='standardText'>";
             $i = 0;
@@ -64,11 +65,8 @@
             }
             echo "</div>";
             ?>
-    <div class="standardText">
-        <form class="main" action="remove_parts.php" method="POST">
             <input id="form_delete" type="submit" value="Delete" name="delete">
         </form>
-    </div>
     <div class="standardText">
         <form class="main" action="update_parts.php" method="POST">
             <input type="text" id="txtNew" name="txtNew">
