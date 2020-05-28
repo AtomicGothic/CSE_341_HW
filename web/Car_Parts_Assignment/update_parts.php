@@ -19,6 +19,7 @@ try
     foreach ($carBrake as $row)
     {
         $brakeStatement->bindValue(':carBrake', $row);
+        echo $row;
     }
 
     $brakeStatement->execute();
