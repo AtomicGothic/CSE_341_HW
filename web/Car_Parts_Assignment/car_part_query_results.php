@@ -19,11 +19,11 @@
             $stmt->bindValue(':name', $name, PDO::PARAM_STR);
             $stmt->execute();
             $carType = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            return $carType;
         }
         catch (Exception $ex) {
             echo "ERROR: $ex";
         }
+        return $carType;
     }
 
     // If the page loads as a POST request, look for this variable, and if it is set
