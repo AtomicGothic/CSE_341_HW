@@ -30,7 +30,7 @@
         <p class="main">Please type in your car make to search (first letter must be capitalized):</p>
         <div class="standardText">
             <form class="main" method='POST' action='car_part_query_results.php'>
-                <input type='text' name='car_type'>
+                <input type='text' name='carType'>
                 <button type='submit'>Search</button>
             </form>
         </div>
