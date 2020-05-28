@@ -52,7 +52,7 @@ catch (Exception $ex)
 }
 
 
-header("Location: showTopics.php");
+header("Location: goff_car_parts.php");
 
 die();
 
