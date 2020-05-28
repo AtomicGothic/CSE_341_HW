@@ -29,8 +29,8 @@ try
     $brakeStatement->execute();
 
 	// get the new id
-    $carId = $db->lastInsertId("carType_id_seq");
-    $brakeId = $db->lastInsertId("carBrakes_id_seq");
+    $carId = $db->lastInsertId("carTypeId_seq");
+    $brakeId = $db->lastInsertId("carBrakesId_seq");
 
     // Again, first prepare the statement
     $carStatement = $db->prepare('INSERT INTO carType_carBrakes(carTypeId, carBrakesId) VALUES(:carTypeId, :carBrakesId)');

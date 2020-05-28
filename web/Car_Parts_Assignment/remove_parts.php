@@ -11,8 +11,8 @@ try
 {
 
     // Delete the referenced ID first.
-    $carId = $db->lastInsertId("carTypeId_id_seq");
-    $brakeId = $db->lastInsertId("carBrakesId_id_seq");
+    $carId = $db->lastInsertId("carTypeId_seq");
+    $brakeId = $db->lastInsertId("carBrakesId_seq");
 
     $carStatement = $db->prepare('DELETE FROM carType_carBrakes WHERE carBrakesId = :carBrakesId');
 
