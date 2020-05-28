@@ -27,7 +27,7 @@
 <div class="standardText">
         <h1 class="main" style="font-size: 20px;">Welcome to Goff's Brakes, Admin!</h1>
         <p class="main">This is where you can search, add, and modify our inventory.</p><br>
-        <p class="main">Please type in your car make:</p>
+        <p class="main">Please type in your car make (first letter must be capitalized):</p>
         <?php search();?>
 </div>
     <footer class="standardText">

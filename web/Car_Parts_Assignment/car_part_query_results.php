@@ -29,7 +29,6 @@
         // Now run the query to find the text in the database, and then save the results as a variable
         $carType = searchQuery($searchText, $db);
         // Change the method name
-        print_r($carType);
     }
 
 ?>
@@ -47,14 +46,16 @@
     <div class="standardText">
         <h2 class="main">Car Parts Available</h2>
         <?php
+            echo "<div class='standardText'>"
             //$carParts = $db->query('SELECT car_brakes.brake_pad FROM car_type, car_brakes WHERE car_type.id = car_brakes.car_type_id')
             $i = 0;
             foreach ($carType as $row)
             {
-                echo "<input id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brake_pad'];
+                echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brake_pad'];
                 echo '<br/><br/>';
                 $i++;
             }
+            echo "</div>"
         ?>
         <button onclick="window.location.href = '../Car_Parts_Assignment/goff_car_parts.php';">Back to Search</button>
     </div>
