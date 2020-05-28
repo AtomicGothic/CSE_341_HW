@@ -38,13 +38,18 @@
             <div class="standardText">
                 <form class="main" method='POST' action="add_parts.php">
                     <input type="text" id="txtMake" name="txtMake">
-                    <label for="txtMake">Make</label><br>
+                    <label for="txtMake">Make</label><br><br>
 
                     <input type="text" id="txtModel" name="txtModel">
-                    <label for="txtModel">Model</label><br>
+                    <label for="txtModel">Model</label><br><br>
 
                     <input type="text" id="txtYear" name="txtYear">
-                    <label for="txtYear">Year</label><br>
+                    <label for="txtYear">Year</label><br><br>
+
+                    <input type="text" id="txtBrake" name="txtBrake">
+                    <label for="txtYear">Brake</label><br><br>
+
+                    <button type='submit'>Add</button>
                 </form>
             </div>
 </div>
