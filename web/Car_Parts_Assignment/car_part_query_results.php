@@ -46,7 +46,7 @@
     <div class="standardText">
         <h2 class="main">Car Parts Available</h2>
         <?php
-            echo "<div class='standardText'>"
+            echo "<div class='standardText'>";
             //$carParts = $db->query('SELECT car_brakes.brake_pad FROM car_type, car_brakes WHERE car_type.id = car_brakes.car_type_id')
             $i = 0;
             foreach ($carType as $row)
@@ -55,7 +55,7 @@
                 echo '<br/><br/>';
                 $i++;
             }
-            echo "</div>"
+            echo "</div>";
         ?>
         <button onclick="window.location.href = '../Car_Parts_Assignment/goff_car_parts.php';">Back to Search</button>
     </div>
