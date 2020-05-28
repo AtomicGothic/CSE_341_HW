@@ -48,46 +48,49 @@
 </head>
 <body>
     <div class="standardText">
-        <h2 class="main">Car Parts Available</h2>
-        <form class="main" action="remove_parts.php" method="POST">
-        <?php
-            echo "<div class='standardText'>";
-            $i = 0;
-            try {
-                foreach ($carType as $row)
-                {
-                    echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
-                    echo '<br/><br/>';
-                    $i++;
+        <h1 class="main">Car Parts Available</h1>
+            <form class="main" action="remove_parts.php" method="POST">
+            <h3 class="main">Select Any to Delete</h3>
+            <?php
+                echo "<div class='standardText'>";
+                $i = 0;
+                try {
+                    foreach ($carType as $row)
+                    {
+                        echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
+                        echo '<br/><br/>';
+                        $i++;
+                    }
+                } catch (Exception $ex) {
+                    echo "ERROR: $ex";
                 }
-            } catch (Exception $ex) {
-                echo "ERROR: $ex";
-            }
-            echo "</div>";
-            ?>
-            <input id="form_delete" type="submit" value="Delete" name="delete">
-        </form>
+                echo "</div>";
+                ?>
+                <input id="form_delete" type="submit" value="Delete" name="delete">
+            </form>
     <div class="standardText">
-        <form class="main" action="update_parts.php" method="POST">
-        <?php
-            echo "<div class='standardText'>";
-            $i = 0;
-            try {
-                foreach ($carType as $row)
-                {
-                    echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
-                    echo '<br/><br/>';
-                    $i++;
+            <form class="main" action="update_parts.php" method="POST">
+            <p class="main">---------------------------------------------------------------------------------------------------</p>
+            <h3 class="main">Select Any to Modify</h3>
+            <?php
+                echo "<div class='standardText'>";
+                $i = 0;
+                try {
+                    foreach ($carType as $row)
+                    {
+                        echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
+                        echo '<br/><br/>';
+                        $i++;
+                    }
+                } catch (Exception $ex) {
+                    echo "ERROR: $ex";
                 }
-            } catch (Exception $ex) {
-                echo "ERROR: $ex";
-            }
-            echo "</div>";
-            ?>
-            <input type="text" id="txtNew" name="txtNew">
-            <label for="txtNew">Rename Here</label><br><br>
-            <input id="form_update" type="submit" value="Update" name="update">
-        </form>
+                echo "</div>";
+                ?>
+                <input type="text" id="txtNew" name="txtNew">
+                <label for="txtNew">Rename Here</label><br><br>
+                <input id="form_update" type="submit" value="Update" name="update">
+            </form>
     </div>
         <button class="main" onclick="window.location.href = '../Car_Parts_Assignment/goff_car_parts.php';">Back to Search</button>
     </div>
