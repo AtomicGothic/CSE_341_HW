@@ -30,6 +30,7 @@
         // Now run the query to find the text in the database, and then save the results as a variable
         $carType = searchQuery($searchText, $db);
         // Change the method name
+        print_r($carType);
     }
 
 ?>
