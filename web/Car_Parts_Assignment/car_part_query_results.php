@@ -48,13 +48,15 @@
         <h2 class="main">Car Parts Available</h2>
         <?php
             //$carParts = $db->query('SELECT car_brakes.brake_pad FROM car_type, car_brakes WHERE car_type.id = car_brakes.car_type_id')
+            $i = 0;
             foreach ($carType as $row)
             {
-                echo "<p>" . $row['brake_pad'] . '</p>';
+                echo "<input id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brake_pad'];
                 echo '<br/><br/>';
+                $i++;
             }
         ?>
-        <button onclick="window.location.href = '../Prove_05/goff_car_parts.php';">Back to Search</button>
+        <button onclick="window.location.href = '../Car_Parts_Assignment/goff_car_parts.php';">Back to Search</button>
     </div>
 <footer class="standardText">
     <p>Posted by: Adam Goff</p>
