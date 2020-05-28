@@ -16,7 +16,7 @@ try
     $brakeStatement = $db->prepare($brakeQuery);
 
     $brakeStatement->bindValue(':newBrake', $newBrake);
-    foreach ($carBrake as $row)
+    foreach ($carBrake['brakesU'] as $row)
     {
         $brakeStatement->bindValue(':carBrake', $row);
         echo $row;
