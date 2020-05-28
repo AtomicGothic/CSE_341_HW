@@ -57,7 +57,7 @@
             }
             echo "</div>";
         ?>
-        <button onclick="window.location.href = '../Car_Parts_Assignment/goff_car_parts.php';">Back to Search</button>
+        <button class="main" onclick="window.location.href = '../Car_Parts_Assignment/goff_car_parts.php';">Back to Search</button>
     </div>
 <footer class="standardText">
     <p>Posted by: Adam Goff</p>

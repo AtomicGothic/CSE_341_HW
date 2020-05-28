@@ -27,8 +27,26 @@
 <div class="standardText">
         <h1 class="main" style="font-size: 20px;">Welcome to Goff's Brakes, Admin!</h1>
         <p class="main">This is where you can search, add, and modify our inventory.</p><br>
-        <p class="main">Please type in your car make (first letter must be capitalized):</p>
-        <?php search();?>
+        <p class="main">Please type in your car make to search (first letter must be capitalized):</p>
+        <div class="standardText">
+            <form class="main" method='POST' action='car_part_query_results.php'>
+                <input type='text' name='car_type'>
+                <button type='submit'>Search</button>
+            </form>
+        </div>
+        <p class="main">Fill this form to add brakes to our inventory:</p>
+            <div class="standardText">
+                <form class="main" method='POST' action="add_parts.php">
+                    <input type="text" id="txtMake" name="txtMake">
+                    <label for="txtMake">Make</label><br>
+
+                    <input type="text" id="txtModel" name="txtModel">
+                    <label for="txtModel">Model</label><br>
+
+                    <input type="text" id="txtYear" name="txtYear">
+                    <label for="txtYear">Year</label><br>
+                </form>
+            </div>
 </div>
     <footer class="standardText">
         <p>Posted by: Adam Goff</p>
