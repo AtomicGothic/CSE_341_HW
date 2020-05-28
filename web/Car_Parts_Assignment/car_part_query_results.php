@@ -23,9 +23,9 @@
     }
 
     // If the page loads as a POST request, look for this variable, and if it is set
-    if(isset($_POST['car_type'])) {
+    if(isset($_POST['carType'])) {
         // Validate & sanitize the input
-        $searchText = validateInput($_POST['car_type']);
+        $searchText = validateInput($_POST['carType']);
         // Now run the query to find the text in the database, and then save the results as a variable
         $carType = searchQuery($searchText, $db);
         // Change the method name
