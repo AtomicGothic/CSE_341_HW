@@ -15,8 +15,11 @@ try
     $brakeQuery = "UPDATE carBrakes SET brakePad = :newBrake WHERE brakePad = :carBrake";
     $brakeStatement = $db->prepare($brakeQuery);
 
-	$brakeStatement->bindValue(':newBrake', $newBrake);
-	$brakeStatement->bindValue(':carBrake', $carBrake);
+    $brakeStatement->bindValue(':newBrake', $newBrake);
+    foreach ($carBrake as $row)
+    {
+        $brakeStatement->bindValue(':carBrake', $row);
+    }
 
     $brakeStatement->execute();
 
