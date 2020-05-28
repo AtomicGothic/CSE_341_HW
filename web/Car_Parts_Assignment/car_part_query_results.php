@@ -32,7 +32,6 @@
         $searchText = validateInput($_POST['carType']);
         // Now run the query to find the text in the database, and then save the results as a variable
         $carType = searchQuery($searchText, $db);
-        print_r($carType);
     }
 
 ?>
@@ -57,7 +56,7 @@
                 try {
                     foreach ($carType as $row)
                     {
-                        echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
+                        echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='brakesD[]'>" . $row['brakepad'];
                         echo '<br/><br/>';
                         $i++;
                     }
@@ -78,7 +77,7 @@
                 try {
                     foreach ($carType as $row)
                     {
-                        echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
+                        echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='brakesU[]'>" . $row['brakepad'];
                         echo '<br/><br/>';
                         $i++;
                     }

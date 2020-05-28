@@ -2,7 +2,7 @@
 session_start();
 
 // get the data from the POST
-$carBrake = $_POST['item'];
+$carBrake = $_POST['brakesU'];
 $newBrake = $_POST['txtNew'];
 
 require("dbConnect.php");
