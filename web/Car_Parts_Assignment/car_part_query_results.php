@@ -56,7 +56,7 @@
             try {
                 foreach ($carType as $row)
                 {
-                    echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakePad'];
+                    echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' name='item[]'>" . $row['brakepad'];
                     echo '<br/><br/>';
                     $i++;
                 }
