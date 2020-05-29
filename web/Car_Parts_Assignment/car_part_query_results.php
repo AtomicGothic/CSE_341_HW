@@ -13,9 +13,7 @@
 
     function searchQuery($name, $db) {
         try{
-            //$stmt = $db->prepare("SELECT * FROM carType, carBrakes, carType_carBrakes WHERE carType.carMake = :name AND carType.id = carType_carBrakes.carTypeid AND carBrakes.id = carType_carBrakes.carBrakesId");
             $stmt = $db->prepare("SELECT cb.brakePad FROM carBrakes AS cb JOIN carType_carBrakes AS ctcb ON ctcb.carBrakesID = cb.id JOIN carType AS ct ON ct.id = ctcb.carTypeID WHERE ct.carMake = :name");
-            //$stmt = $db->prepare("SELECT * FROM car_type, car_brakes WHERE ('car_type.car_make' LIKE \"%:name%\") AND car_type.id = car_brakes.car_type_id";
             $stmt->bindValue(':name', $name, PDO::PARAM_STR);
             $stmt->execute();
             $carType = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -56,8 +54,10 @@
                 try {
                     foreach ($carType as $row)
                     {
-                        echo "<input class='main' id=\"item_" . $i . "\" value='" . $row['brakepad'] ."' type='checkbox' name='brakesD[]'>" . $row['brakepad'];
+                        echo "<input class='main' id=\"item_" . $i . "\" value='" . $row['brakepad'] ."' type='radio' name='brakesD[]'>" . $row['brakepad'];
                         echo '<br/><br/>';
+                        //echo "<input class='main' id=\"item_" . $i . "\" value='" . $row['brakepad'] ."' type='checkbox' name='brakesD[]'>" . $row['brakepad'];
+                        //echo '<br/><br/>';
                         $i++;
                     }
                 } catch (Exception $ex) {
