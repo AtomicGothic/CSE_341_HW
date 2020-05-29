@@ -56,8 +56,6 @@
                     {
                         echo "<input class='main' id=\"item_" . $i . "\" value='" . $row['brakepad'] ."' type='radio' name='brakesD[]'>" . $row['brakepad'];
                         echo '<br/><br/>';
-                        //echo "<input class='main' id=\"item_" . $i . "\" value='" . $row['brakepad'] ."' type='checkbox' name='brakesD[]'>" . $row['brakepad'];
-                        //echo '<br/><br/>';
                         $i++;
                     }
                 } catch (Exception $ex) {
@@ -77,7 +75,7 @@
                 try {
                     foreach ($carType as $row)
                     {
-                        echo "<input class='main' id=\"item_" . $i . "\" type='checkbox' value='" . $row['brakepad'] ."' name='brakesU[]'>" . $row['brakepad'];
+                        echo "<input class='main' id=\"item_" . $i . "\" type='radio' value='" . $row['brakepad'] ."' name='brakesU[]'>" . $row['brakepad'];
                         echo '<br/><br/>';
                         $i++;
                     }
