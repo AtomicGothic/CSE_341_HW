@@ -17,17 +17,15 @@ try
     $brakeQuery = "DELETE FROM carBrakes WHERE brakePad = :carBrake";
     $brakeStatement = $db->prepare($brakeQuery);
 
+    $IdStatement = $db->prepare("DELETE FROM carType_carBrakes WHERE carBrakesId = (SELECT carBrakesId, id FROM carType_carBrakes, carBrakes WHERE carType_carBrakes.carBrakesId = carBrakes.id AND carBrakes.brakePad = :carBrake)");
     foreach ($carBrake as $row)
     {
         $cleanedRow = htmlspecialchars($row);
         $brakeStatement->bindValue(':carBrake', $cleanedRow);
         $brakeId->bindValue(':carBrake', $cleanedRow);
+        $IdStatement->bindValue(':carBrake', $cleanedRow);
     }
 
-    $Id = $brakeId->execute();
-    log($Id);
-
-    $IdStatement = $db->prepare("DELETE FROM carType_carBrakes WHERE carBrakesId = $Id");
     //$IdStatement->bindValue(':brakeId', $Id);
     //$brakeStatement->bindValue(':carTypeId', $carId);
 
