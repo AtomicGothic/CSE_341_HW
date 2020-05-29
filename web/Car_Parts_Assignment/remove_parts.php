@@ -11,15 +11,16 @@ try
 {
 
     // Delete the referenced ID first.
-    $carId = $db->lastInsertId("carTypeId_seq");
-    $brakeId = $db->lastInsertId("carBrakesId_seq");
+    //$carId = $db->lastInsertId("carTypeId_seq");
+                           // "SELECT cb.brakePad FROM carBrakes AS cb JOIN carType_carBrakes AS ctcb ON ctcb.carBrakesID = cb.id JOIN carType AS ct ON ct.id = ctcb.carTypeID WHERE ct.carMake = :name"
+    $brakeId = $db->prepare("SELECT ctcb.carBrakesId FROM carType_carBrakes AS ctcb JOIN carBrakes AS cb ON cb.brakePad = cb.id WHERE ctcb.id = cb.id");
 
-    $carStatement = $db->prepare('DELETE FROM carType_carBrakes WHERE carBrakesId = :carBrakesId');
+    $IdStatement = $db->prepare('DELETE FROM carType_carBrakes WHERE carBrakesId = :brakeId');
 
-    $brakeStatement->bindValue(':carTypeId', $carId);
-    $brakeStatement->bindValue(':carBrakesId', $brakeId);
+    //$brakeStatement->bindValue(':carTypeId', $carId);
+    $idStatement->bindValue(':brakeId', $brakeId);
 
-    $brakeStatement->execute();
+    $IdStatement->execute();
 
     // Delete the brake pad second.
     $brakeQuery = "DELETE FROM carBrakes WHERE brakePad = :carBrake";
