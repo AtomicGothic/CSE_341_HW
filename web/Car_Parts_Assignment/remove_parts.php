@@ -18,7 +18,13 @@ try
     $brakeQuery = "DELETE FROM carBrakes WHERE brakePad = :carBrake";
     $brakeStatement = $db->prepare($brakeQuery);
 
-    $idStatement->bindValue(':brakeId', $brakeId);
+    $IdStatement->bindValue(':brakeId', $brakeId);
+
+    foreach ($carBrake as $row)
+    {
+        $cleanedRow = htmlspecialchars($row);
+        $IdStatement->bindValue(':carBrake', $cleanedRow);
+    }
 
     foreach ($carBrake as $row)
     {
