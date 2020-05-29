@@ -21,7 +21,6 @@ try
     foreach ($carBrake as $row)
     {
         $cleanedRow = htmlspecialchars($row);
-        $IdStatement->bindValue(':carBrake', $cleanedRow);
         $brakeStatement->bindValue(':carBrake', $cleanedRow);
         $brakeId->bindValue(':carBrake', $cleanedRow);
     }
