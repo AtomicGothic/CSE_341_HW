@@ -14,7 +14,7 @@ try
     //$carId = $db->lastInsertId("carTypeId_seq");
 
     $brakeId = $db->prepare("SELECT carBrakesId, id FROM carType_carBrakes, carBrakes WHERE carType_carBrakes.carBrakesId = carBrakes.id AND carBrakes.brakePad = :carBrake");
-    $IdStatement = $db->prepare('DELETE FROM carType_carBrakes WHERE carBrakesId = :brakeId');
+    $IdStatement = $db->prepare("DELETE FROM carType_carBrakes WHERE carBrakesId = $brakeId");
     $brakeQuery = "DELETE FROM carBrakes WHERE brakePad = :carBrake";
     $brakeStatement = $db->prepare($brakeQuery);
 
@@ -25,7 +25,7 @@ try
         $brakeId->bindValue(':carBrake', $cleanedRow);
     }
 
-    $IdStatement->bindValue(':brakeId', $brakeId);
+    //$IdStatement->bindValue(':brakeId', $brakeId);
     //$brakeStatement->bindValue(':carTypeId', $carId);
 
 
