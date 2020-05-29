@@ -26,8 +26,8 @@ try
 
     $Id = $brakeId->execute();
 
-    $IdStatement = $db->prepare("DELETE FROM carType_carBrakes WHERE carBrakesId = :brakeId");
-    $IdStatement->bindValue(':brakeId', $Id);
+    $IdStatement = $db->prepare("DELETE FROM carType_carBrakes WHERE carBrakesId = $Id");
+    //$IdStatement->bindValue(':brakeId', $Id);
     //$brakeStatement->bindValue(':carTypeId', $carId);
 
 
